@@ -1,0 +1,22 @@
+[package]
+name = "imo-scrapper"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "imo-scraper"
+path = "src/main.rs"
+
+[lib]
+name = "ec2_imds"
+path = "src/lib/ec2_imds/src/lib.rs"
+
+[dependencies]
+isocountry = "0.3.2"
+scraper="0.16.0"
+url = "2.3.1"
+reqwest = { version = "0.11.18", features = ["blocking"] }
+aws-config = "0.55.2"
+aws-sdk-ec2 = "0.27.0"
+tokio = { version = "1.28", features = ["full"] }
+ec2_instance_metadata = "0.3.0"
